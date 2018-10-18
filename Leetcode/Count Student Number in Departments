@@ -1,0 +1,4 @@
+# Write your MySQL query statement below
+select department.dept_name,count(student.student_name) as student_number from student right join department on student.dept_id=department.dept_id group by department.dept_name having count(department.dept_name)>=0 order by student_number desc,department.dept_name asc
+
+
