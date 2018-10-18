@@ -1,0 +1,4 @@
+select Employee.Name from Employee where Id in (select ManagerId from Employee group by Employee.ManagerId having count(Employee.ManagerId)>=5)
+
+
+
